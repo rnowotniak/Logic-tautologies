@@ -1,24 +1,24 @@
 --
--- Copyright (C) 2004   Robert Nowotniak <robercik@toya.net.pl>
+-- Copyright (C) 2004   Robert Nowotniak <rnowotniak@gmail.com>
 --
--- tautolog.adb - sprawdzanie wyrażeń logicznych i tautologii
--- Pon 26 Sty 19:53:11 2004
+-- tautolog.adb - program for checking propositional logic tautologies
+-- Jan 26th, 19:53  2004
 --
---   Niniejszy program jest wolnym oprogramowaniem; możesz go
---   rozprowadzać dalej i/lub modyfikować na warunkach Powszechnej
---   Licencji Publicznej GNU, wydanej przez Fundację Wolnego
---   Oprogramowania - według wersji 2 tej Licencji lub (według twojego
---   wyboru) którejś z późniejszych wersji.
+--    This program is free software: you can redistribute it and/or modify
+--    it under the terms of the GNU General Public License as published by
+--    the Free Software Foundation, either version 3 of the License, or
+--    (at your option) any later version.
 --
---   Niniejszy program rozpowszechniany jest z nadzieją, iż będzie on
---   użyteczny - jednak BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej
---   gwarancji PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH
---   ZASTOSOWAŃ. W celu uzyskania bliższych informacji sięgnij do
---   Powszechnej Licencji Publicznej GNU.
+--    This program is distributed in the hope that it will be useful,
+--    but WITHOUT ANY WARRANTY; without even the implied warranty of
+--    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--    GNU General Public License for more details.
+--
+--    You should have received a copy of the GNU General Public License
+--    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --
 --
--- Składnia wyrażeń logicznych, sprawdzanych przez ten program,
--- musi być następująca:
+-- Logic statements syntax accepted by this program is:
 --
 --------8<--------8<--------8<--------8<--------8<--------8<--------8<
 -- <Sigma> ::= <L> { "<=>" <L> }
@@ -30,8 +30,7 @@
 --------8<--------8<--------8<--------8<--------8<--------8<--------8<
 --
 --
--- Priorytet rozpoznawanych funktorów zdaniotwórczych jest następujący:
--- [od najsilniejszego do najsłabszego]:
+-- Operators priorities (from the highest priority to lowest priority):
 --
 --      [] () {}
 --      ~
@@ -39,13 +38,13 @@
 --      =>
 --      <=>
 --
---  v   - oznacza alternatywę
---  ^   - oznacza koniunkcję
---  +   - oznacza alternatywę wyłączającą
---  |   - oznacza kreskę Scheffer'a
+--  v   - alternative
+--  ^   - conjunction
+--  +   - xor
+--  |   - Sheffer stroke
 --
 --
--- Analizator leksykalny pomija białe znaki i znaki nowej linii.
+-- Implemented lexical analyser skips all whitespaces and new line characters.
 --
 --
 
