@@ -1,4 +1,4 @@
-# Logic-tautologies
+# Logic-tautologies in Ada95
 My program in Ada95 for checking for tautologies and contradictions in Propositional Logic.
 It checks by analysing [Truth tables](https://en.wikipedia.org/wiki/Truth_function#Table_of_binary_truth_functions)
 for all possible variables values combinations.
