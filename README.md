@@ -7,12 +7,14 @@ for all possible variables values combinations.
 
 ### Example 1: `(p=>s)v(~s=>~t) <=> p=>(s v t)`
 
-This truth table shows that `(p=>s)v(~s=>~t) <=> p=>(s v t)` statement is neither a tautology nor a contradiction.
 ![Example 1](example1.png)
+
+This truth table shows that `(p=>s)v(~s=>~t) <=> p=>(s v t)` statement is neither a tautology nor a contradiction.
 
 ### Example 2: `[p v (q^r)] <=> [(p v q)^(p v r)]`
 
 ![Example 2](example2.png)
+
 This truth table shows that `[p v (q^r)] <=> [(p v q)^(p v r)]` statement is a tautology (i.e. always true for all variables values).
 
 ## Web application
