@@ -17,7 +17,3 @@ This truth table shows that `(p=>s)v(~s=>~t) <=> p=>(s v t)` statement is neithe
 
 This truth table shows that `[p v (q^r)] <=> [(p v q)^(p v r)]` statement is a tautology (i.e. always true for all variables values).
 
-## Web application
-
-The same program works in back-end of my web application available on my website: [http://robert.nowotniak.com/tautolog](http://robert.nowotniak.com/tautolog).
-
