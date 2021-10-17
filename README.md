@@ -3,6 +3,8 @@ My program in Ada95 for checking for tautologies and contradictions in Propositi
 It checks by analysing [Truth tables](https://en.wikipedia.org/wiki/Truth_function#Table_of_binary_truth_functions)
 for all possible variables values combinations.
 
+The main logic is implemented in [tautolog.adb](tautolog.adb) Ada95 source code.
+
 ## Examples
 
 ### Example 1: `(p=>s)v(~s=>~t) <=> p=>(s v t)`
